@@ -24,10 +24,11 @@ Nous allons suivre 2 grandes étapes afin de pouvoir déployer une API RestFul s
 
 
 3) Vous retrouverez le jar généré dans le dossier target :
-   ![Jar dans le dossier target](https://raw.githubusercontent.com/sauvageb/RENDER_spring-boot/main/jar_generated.png)
 
-4) Vous pouvez exécuter le jar exécutable avec la commande :
-   ```java -jar ./target/demo-spring-boot-0.0.1-SNAPSHOT.jar```
+![Jar dans le dossier target](https://raw.githubusercontent.com/sauvageb/RENDER_spring-boot/main/images/jar_generated.png)
+
+4Vous pouvez exécuter le jar exécutable avec la commande :
+```java -jar ./target/demo-spring-boot-0.0.1-SNAPSHOT.jar```
 
 ### Etape 2 :
 
@@ -57,14 +58,17 @@ Nous allons suivre 2 grandes étapes afin de pouvoir déployer une API RestFul s
 
 3) Envoyez votre code sur github ou gitlab
 
-4) Créez un compte sur render.com et créez un nouveau projet Webservice
 
-- Dashboard -> Webservice
-  ![New Web service](https://raw.githubusercontent.com/sauvageb/RENDER_spring-boot/main/render_new_web_service.png)
+4) Créez un compte sur render.com et créez un nouveau projet Webservice (Dashboard -> Webservice)
+
+![New Web service](https://raw.githubusercontent.com/sauvageb/RENDER_spring-boot/main/images/render_new_web_service.png)
 
 5) Séléctionnez Build and deploy from a Git repository
 
-![New Web service](https://raw.githubusercontent.com/sauvageb/RENDER_spring-boot/main/deploy_from_git.png)
+![New Web service](https://raw.githubusercontent.com/sauvageb/RENDER_spring-boot/main/images/deploy_from_git.png)
 
-6) Séléctionnez votre projet github et configurez les valeurs 
+6) Séléctionnez votre projet github et configurez les valeurs
+
+
+7) Le projet est déployé !
 
