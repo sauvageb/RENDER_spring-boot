@@ -1,12 +1,11 @@
 package com.example.demospringboot.controller;
 
+import com.example.demospringboot.controller.dto.CreateUser;
 import com.example.demospringboot.model.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,9 +15,31 @@ import java.util.Random;
 @RequestMapping("/api/users")
 public class UserController {
 
+    @PostMapping
+    public ResponseEntity<?> addUser(@RequestBody CreateUser dto){
+        // Récupération du DTO : Data Transfer Object (Pattern)
+
+        if(dto.getEmail().contains("@website.fr")){
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+
+        User createUser = new User(
+                dto.getFirstName(),
+                dto.getLastName(),
+                dto.getEmail());
+
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+
+
 
     @GetMapping
     public ResponseEntity<?> fetchUsers(){
+
+        // TODO mettre en place un service
+        // TODO mettre en place des DTOs
+
 
         List<User> users = new ArrayList<>();
         // Générez 10 utilisateurs avec des informations aléatoires
